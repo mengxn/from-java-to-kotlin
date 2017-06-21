@@ -434,7 +434,6 @@ fun getScore(value: Int): Int {
 }
 
 // as a single-expression function
-
 fun getScore(value: Int): Int = 2 * value
 ```
 
@@ -555,7 +554,7 @@ data class Developer(var name: String, var age: Int)
 ```java
 public class Developer implements Cloneable {
 
-    private String name;
+    private String name;
     private int age;
 
     public Developer(String name, int age) {
@@ -570,7 +569,7 @@ public class Developer implements Cloneable {
 }
 
 // cloning or copying 
-Developer dev = new Developer("Max", 30);
+Developer dev = new Developer("Mindorks", 30);
 try {
      Developer dev2 = (Developer) dev.clone();
 } catch (CloneNotSupportedException e) {
@@ -585,7 +584,7 @@ try {
 data class Developer(var name: String, var age: Int)
 
 // cloning or copying
-val dev = Developer("Max", 30)
+val dev = Developer("Mindorks", 30)
 val dev2 = dev.copy()
 // in case you only want to copy selected properties
 val dev2 = dev.copy(age = 25)
@@ -622,6 +621,21 @@ fun Int.triple(): Int {
 
 var result = 3.triple()
 ```
+
+---
+
+> Java
+
+```java
+Person person;
+```
+
+> Kotlin
+
+```kotlin
+internal lateinit var person: Person
+```
+
 
 ---
 
